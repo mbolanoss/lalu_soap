@@ -7,12 +7,12 @@ import fs from 'fs';
 
 import { request, gql } from 'graphql-request'
 
-const url = "https://graphqlzero.almansi.me/api";
+const url = "//proxy.lalu/graphql";
 
 function getQueryForId(id) {
     const query = gql `{
-            user(id: ${id}) {
-                name
+            getSongById(id: ${id}) {
+                title
             }
         }`
     return query
@@ -23,9 +23,9 @@ function main(args, callback) {
     const id = args.id;
     request(url, getQueryForId(id))
         .then((data) => {
-            const name = data.user.name;
+            const title = data.data.getSongById.title;
             callback({
-                songUrl: name
+                song_title: title
             })
         })
 }
