@@ -1,0 +1,40 @@
+{
+    "name": "node-soap-example",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "A simple SOAP Server and Client using Node.js, express and node-soap (https://github.com/vpulim/node-soap)",
+    "main": "app.js",
+    "scripts": {
+        "start": "node .",
+        "dev": "nodemon .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git"
+    },
+    "keywords": [
+        "SOAP",
+        "node.js",
+        "express",
+        "SOAP-server",
+        "SOAP-client",
+        "server",
+        "client",
+        "web",
+        "service"
+    ],
+    "author": "Santiago Acosta",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/macogala/node-soap-example/issues"
+    },
+    "homepage": "https://github.com/macogala/node-soap-example#readme",
+    "dependencies": {
+        "express": "^4.15.2",
+        "graphql": "^16.5.0",
+        "graphql-request": "^4.3.0",
+        "node-fetch": "^3.2.5",
+        "nodemon": "^2.0.16",
+        "soap": "^0.19.0"
+    }
+}
