@@ -5,7 +5,7 @@ import soap from 'soap';
 const url = 'http://localhost:8000/wsdl?wsdl';
 
 // url de tunel (interoperabilidad)
-// const url = 'https://5729-186-154-177-162.ngrok.io/wsdl?wsdl';
+// const url = 'https://000c-186-154-177-162.ngrok.io/wsdl?wsdl';
 
 // Create client
 soap.createClient(url, function(err, client) {
