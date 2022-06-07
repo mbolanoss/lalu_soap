@@ -11,7 +11,7 @@ const url = "http://34.117.100.225/graphql";
 
 function getQueryForId(id) {
     const query = gql `{
-            getSongById(id: ${id}) {
+            getSongById(id: "${id}") {
                 title
             }
         }`
@@ -21,8 +21,10 @@ function getQueryForId(id) {
 // the splitter function, used by the service
 function main(args, callback) {
     const id = args.id;
+    console.log(id);
     request(url, getQueryForId(id))
         .then((data) => {
+            console.log(data);
             const title = data.data.getSongById.title;
             callback({
                 song_title: title
