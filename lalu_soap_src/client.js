@@ -1,8 +1,7 @@
 // npm install soap
 import soap from 'soap';
 
-// url de localhost (pruebas)
-const url = 'http://localhost:8000/wsdl?wsdl';
+const url = 'http://34.123.106.254:3009/wsdl?wsdl';
 
 // Create client
 soap.createClient(url, function(err, client) {
@@ -14,7 +13,7 @@ soap.createClient(url, function(err, client) {
      * in the WSDL file
      */
     var args = {
-        id: '1'
+        id: '62718e54b9621e3a0066d49f'
     };
     // call the service
     client.MessageSplitter(args, function(err, res) {
