@@ -14,7 +14,7 @@ soap.createClient(url, function(err, client) {
      * in the WSDL file
      */
     var args = {
-        id: '62718e54b9621e3a0066d49f'
+        id: '6285787584a4c87434cd2985'
     };
     // call the service
     client.MessageSplitter(args, function(err, res) {
