@@ -24,8 +24,7 @@ function main(args, callback) {
     console.log(id);
     request(url, getQueryForId(id))
         .then((data) => {
-            console.log(data);
-            const title = data.data.getSongById.title;
+            const title = data.getSongById.title;
             callback({
                 song_title: title
             })
