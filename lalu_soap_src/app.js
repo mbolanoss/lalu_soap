@@ -7,7 +7,7 @@ import fs from 'fs';
 
 import { request, gql } from 'graphql-request'
 
-const url = "//proxy.lalu/graphql";
+const url = "http://34.117.100.225/graphql";
 
 function getQueryForId(id) {
     const query = gql `{
@@ -56,5 +56,5 @@ app.listen(port, function() {
     console.log('Listening on port ' + port);
     const wsdl_path = "/wsdl";
     soap.listen(app, wsdl_path, serviceObject, xml);
-    console.log("Check http://localhost:" + port + wsdl_path + "?wsdl to see if the service is working");
+    console.log("Check port " + port + wsdl_path + " to see if the service is working");
 });
