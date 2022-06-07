@@ -7,6 +7,8 @@ import fs from 'fs';
 
 import { request, gql } from 'graphql-request'
 
+import requestFunc from './request.js'
+
 const url = "http://34.117.100.225/graphql";
 
 function getQueryForId(id) {
@@ -51,11 +53,14 @@ app.get('/', function(req, res) {
     res.send('Node Soap Example!<br /><a href="/wsdl?wsdl">Wsdl endpoint</a>');
 })
 
+//routes
+app.get('/consume/:id', requestFunc);
+
 // Launch the server and listen
 const port = 8000;
 app.listen(port, function() {
     console.log('Listening on port ' + port);
     const wsdl_path = "/wsdl";
     soap.listen(app, wsdl_path, serviceObject, xml);
-    console.log("Check port " + port + wsdl_path + " to see if the service is working");
+    console.log("Check port " + port + " to see if the service is working");
 });
