@@ -1,8 +1,8 @@
 // npm install soap
 import soap from 'soap';
 
-// const url = 'http://34.123.106.254:3009/wsdl?wsdl';
-const url = 'http://localhost:8000/wsdl?wsdl';
+const url = 'http://34.123.106.254:3009/wsdl?wsdl';
+// const url = 'http://localhost:8000/wsdl?wsdl';
 
 // Create client
 soap.createClient(url, function(err, client) {
@@ -21,7 +21,6 @@ soap.createClient(url, function(err, client) {
         if (err)
             throw err;
         // print the service returned result
-        console.log(typeof res)
         console.log(res);
     });
 });

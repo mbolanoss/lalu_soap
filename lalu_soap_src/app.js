@@ -5,6 +5,8 @@ import soap from 'soap';
 import express from 'express';
 import fs from 'fs';
 
+import cors from 'cors';
+
 import { request, gql } from 'graphql-request'
 
 import requestFunc from './request.js'
@@ -46,6 +48,8 @@ var serviceObject = {
 
 const xml = fs.readFileSync('service.wsdl', 'utf8');
 const app = express();
+
+app.use(cors());
 
 // root handler
 app.get('/', function(req, res) {
