@@ -23,13 +23,12 @@ function getQueryForId(id) {
 // the splitter function, used by the service
 function main(args, callback) {
     const id = args.id;
-    console.log(id);
     request(url, getQueryForId(id))
         .then((data) => {
             const title = data.getSongById.title;
             callback({
-                song_title: title
-            })
+                result: title
+            });
         })
 }
 
