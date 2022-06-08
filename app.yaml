@@ -1,4 +1,4 @@
 runtime: nodejs14
 service: lalu-soap
 
-entrypoint: npm run serve
+entrypoint: npm run start
