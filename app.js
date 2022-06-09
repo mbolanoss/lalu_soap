@@ -60,7 +60,7 @@ app.get('/', function(req, res) {
 app.get('/consume/:id', requestFunc);
 
 // Launch the server and listen
-const port = 8000;
+const port = process.env.PORT || 8000;
 app.listen(port, function() {
     console.log('Listening on port ' + port);
     const wsdl_path = "/wsdl";
