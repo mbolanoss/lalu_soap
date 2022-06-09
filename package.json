@@ -37,5 +37,8 @@
         "node-fetch": "^3.2.5",
         "nodemon": "^2.0.16",
         "soap": "^0.19.0"
+    },
+    "engines": {
+        "node": "10.x"
     }
 }
