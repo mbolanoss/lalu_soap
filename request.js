@@ -43,7 +43,7 @@ async function requestFunc(req, res) {
             const response = {
                 user: {
                     id: id,
-                    user: user,
+                    name: user,
                     email: email
                 }
             }
