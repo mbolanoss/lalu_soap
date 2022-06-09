@@ -1,9 +1,10 @@
-import soap from 'soap';
+// const { default: request } = require('graphql-request');
+const soap = require('soap');
 
 // const url = 'http://34.123.106.254:3009/wsdl?wsdl';
 const url = "http://soap.skillsly.app:8080/ws/users.wsdl"
 
-export default async(req, res) => {
+async function requestFunc(req, res) {
     const id = req.params.id;
 
     soap.createClient(url, function(err, client) {
@@ -26,3 +27,5 @@ export default async(req, res) => {
         });
     });
 };
+
+module.exports = requestFunc;

@@ -1,15 +1,15 @@
 /*jslint node: true */
 "use strict";
 
-// import soap from 'soap';
-import express from 'express';
-import fs from 'fs';
+const soap = require('soap');
+const express = require('express');
+const fs = require('fs');
 
-import cors from 'cors';
+const cors = require('cors');
 
-import { request, gql } from 'graphql-request'
+const { request, gql } = require('graphql-request');
 
-import requestFunc from './request.js'
+const requestFunc = require('./request.js');
 
 const url = "https://35.226.199.77.nip.io/graphql";
 
@@ -64,6 +64,6 @@ const port = 8000;
 app.listen(port, function() {
     console.log('Listening on port ' + port);
     const wsdl_path = "/wsdl";
-    // soap.listen(app, wsdl_path, serviceObject, xml);
+    soap.listen(app, wsdl_path, serviceObject, xml);
     console.log("Check port " + port + " to see if the service is working");
 });
