@@ -76,11 +76,11 @@
   <!-- SERVICE:  -->
   <wsdl:service name="MessageSplitterService">
     <wsdl:port name="MessageSplitterServiceSoapPort" binding="tns:MessageSplitterServiceSoapBinding">
-      <soap:address location="https://lalu-soap-dot-lalu-storage.uc.r.appspot.com/wsdl"/>
+      <soap:address location="https://lalu-soap.herokuapp.com/wsdl"/>
       <!-- <soap12:address location="http://localhost:8000/wsdl"/> -->
     </wsdl:port>
     <wsdl:port name="MessageSplitterServiceSoap12Port" binding="tns:MessageSplitterServiceSoap12Binding">
-      <soap12:address location="https://lalu-soap-dot-lalu-storage.uc.r.appspot.com/wsdl"/>
+      <soap12:address location="https://lalu-soap.herokuapp.com/wsdl"/>
       <!-- <soap12:address location="http://localhost:8000/wsdl"/> -->
     </wsdl:port>
   </wsdl:service>
