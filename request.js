@@ -7,13 +7,13 @@ const url = "http://soap.skillsly.app:8080/ws/users.wsdl"
 async function requestFunc(req, res) {
     const id = req.params.id;
 
-    return {
+    return res.json({
         user: {
             name: 'mock-name',
             id: 'mock-id',
             email: 'mock-email'
         }
-    }
+    })
 
     // soap.createClient(url, function(err, client) {
     //     if (err) {
