@@ -13,6 +13,8 @@ const requestFunc = require('./request.js');
 
 const url = "https://35.226.199.77.nip.io/graphql";
 
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"]
+
 function getQueryForId(id) {
     const query = gql `{
             getSongById(id: "${id}") {
