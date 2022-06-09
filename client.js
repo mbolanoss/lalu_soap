@@ -1,7 +1,7 @@
 // npm install soap
 const soap = require('soap');
 
-const url = 'https://lalu-soap-dot-lalu-storage.uc.r.appspot.com/wsdl?wsdl';
+const url = 'https://lalu-soap.herokuapp.com/wsdl?wsdl';
 // const url = 'http://localhost:8000/wsdl?wsdl';
 
 // Create client
