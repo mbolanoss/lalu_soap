@@ -11,7 +11,7 @@ import { request, gql } from 'graphql-request'
 
 import requestFunc from './request.js'
 
-const url = "https://35.226.199.77.nip.io/graphql";
+const url = "http://35.223.151.61.nip.io/graphql";
 
 function getQueryForId(id) {
     const query = gql `{
